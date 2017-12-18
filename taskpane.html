@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Taskpane Test</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <link rel="stylesheet" type="text/css" media="all" href="css/taskpane.css" />
-		<script type="text/javascript" src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1/hosted/office.debug.js"></script>
-		<script type="text/javascript" src="js/scripts.js"></script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="GetSubject">
-				<Button type="button" value="Display ReplyAll Form" onclick="getSubject()">Get Subject</button><br/>
-				Subject: <br/>
-				<p id="subject"></p>
-			</div>
-			<br/>
-<div id="container">
-	<form action="/action_page.php">
-  <input type="file" name="pic" accept="image/*">
-  <input type="submit">
-</form>
-</div>
-</br>
-		
-		<div id="postButton">
-		<button type="button" onclick=myFunction() >Click Me!</button>
-		</div>
-		
-		
-		
-
-			<div id="Notifications">
-				<button type="button" value="Add Notification" onclick="uilessAddNotification()">Add Notification</button>
-			</div>
-			<br />
-			<p>If you have any issues with this add-in, contact <a
-                href="mailto://shubhhack@microsoft.com?subject=App Command Test
-                Add-in&body=Tell me what issue(s) you are facing. Repro steps
-                are always appreciated.">shubhhack</a>.
-		</div>
-	    <script>
-			function myFunction() {
-				var request = new XMLHttpRequest();
-				request.open('post', ' https://postman-echo.com/post', true);
-				request.setRequestHeader('Content-Type', 'application/json');
-				request.send(); 
-			   }	
-		    
-		    
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-91310971-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-	</body>
+   <head>
+      <title>Taskpane Test</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <link rel="stylesheet" type="text/css" media="all" href="css/taskpane.css" />
+      <script type="text/javascript" src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1/hosted/office.debug.js"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+   </head>
+   <body>
+      <div id="container">
+         <div id="GetSubject">
+            <Button type="button" value="Display ReplyAll Form" onclick="getSubject()">Get Subject</button><br/>
+            Subject: <br/>
+            <p id="subject"></p>
+         </div>
+         <br/>
+         <div id="container">
+            <form action="/action_page.php">
+               <input type="file" name="pic" accept="image/*">
+               <input type="submit">
+            </form>
+         </div>
+         </br>
+         <div id="postButton">
+            <button type="button" onclick=myFunction() >Click Me!</button>
+         </div>
+         <div id="Notifications">
+            <button type="button" value="Add Notification" onclick="uilessAddNotification()">Add Notification</button>
+         </div>
+         <br />
+         <p>If you have any issues with this add-in, contact <a
+            href="mailto://shubhhack@microsoft.com?subject=App Command Test
+            Add-in&body=Tell me what issue(s) you are facing. Repro steps
+            are always appreciated.">shubhhack</a>.
+      </div>
+      <script>
+         function myFunction() {
+         	var request = new XMLHttpRequest();
+         	request.open('post', ' https://postman-echo.com/post', true);
+         	request.setRequestHeader('Content-Type', 'application/json');
+         	request.send(); 
+            }	
+            
+            
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+                  ga('create', 'UA-91310971-1', 'auto');
+                  ga('send', 'pageview');
+              
+      </script>
+   </body>
 </html>
