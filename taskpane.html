@@ -39,6 +39,7 @@
          	var request = new XMLHttpRequest();
          	request.open('post', ' https://postman-echo.com/post', true);
          	request.setRequestHeader('Content-Type', 'application/json');
+            request.setRequestHeader('Access-Control-Allow-Origin', '*');
          	request.send(); 
             }	
             
