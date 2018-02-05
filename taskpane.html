@@ -67,7 +67,7 @@
               for(var header in headers) {
                 request.setRequestHeader(header, headers[header]);
               }
-              request.send(JSON.stringify(data));
+              request.send(data);
             }
             catch(e) {
               console.log(e);
