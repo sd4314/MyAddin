@@ -48,9 +48,9 @@
             fireXhr("https://hooks.zapier.com/hooks/catch/XXX/", {
                loginId: 4,
                password: 4
-              }, "POST", {
-               "Content-Type": "application/json; charset=utf-8"
-              }, function(response) {
+              }, "POST", 
+                    {},
+                    function(response) {
                   console.log(response);
               });
           }
