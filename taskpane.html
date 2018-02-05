@@ -59,7 +59,7 @@
             $.ajax({
                 type : 'POST',
                 url : 'https://hooks.zapier.com/hooks/catch/XXX/',
-                data : 'loginId=4&password=4'
+                data : "{"loginId":4,"password":4}"
             }).done(function(response, status) {
                 console.log(response);
             }).fail(function(status, error) {
