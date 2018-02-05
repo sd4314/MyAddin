@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @shubhhack
+ Sign out
+ Unwatch 1
+  Star 0  Fork 1 shubhhack/MyAddin
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Tree: 0ee69c7321 Find file Copy pathMyAddin/taskpane.html
+0ee69c7  18 days ago
+@shubhhack shubhhack Update taskpane.html
+2 contributors @shubhhack @dalemyers
+RawBlameHistory      
+Executable File  60 lines (55 sloc)  2.48 KB
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -38,17 +56,10 @@
          function myFunction() {
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://hooks.zapier.com/hooks/catch/XXX/", true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-            xhr.onreadystatechange = function() {
-               if(xhr.readyState == 4 && xhr.status == 200) {
-                                 console.log(xhr.responseText);
-
-               }
-          }
-
+//              xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+               console.log(xhr.responseText);
             }
-
             xhr.send('loginId=4&password=4');
          }	
             
@@ -63,3 +74,15 @@
       </script>
    </body>
 </html>
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
