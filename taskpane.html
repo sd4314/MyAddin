@@ -74,7 +74,7 @@
             
           }
          
-         func asyncEvent() {
+         function asyncEvent() {
                         
                   Office.context.mailbox.addHandlerAsync(Office.EventType.ItemChanged, loadNewItem, function (result) {
             if (result.status === Office.AsyncResultStatus.Failed) {
