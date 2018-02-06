@@ -38,7 +38,47 @@
             are always appreciated.">shubhhack</a>.
     </div>
     <script>
-        function myFunction() {
+      <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Taskpane Test</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" type="text/css" media="all" href="css/taskpane.css" />
+    <script type="text/javascript" src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1/hosted/office.debug.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="GetSubject">
+            <Button type="button" value="Display ReplyAll Form" onclick="getSubject()">Get Subject</button><br/> Subject: <br/>
+            <p id="subject"></p>
+        </div>
+        <br/>
+        <div id="container">
+            <form action="/action_page.php">
+                <input type="file" name="pic" accept="image/*">
+                <input type="submit">
+            </form>
+        </div>
+        </br>
+        <div id="postButton">
+            <button type="button" onclick= myFunction() >Click Me!</button>
+        </div>
+        <div id="testButton">
+            <button type="button" onclick= asyncEvent() >Click Me!</button>
+        </div>
+        <div id="Notifications">
+            <button type="button" value="Add Notification" onclick="uilessAddNotification()">Add Notification</button>
+        </div>
+        <br />
+        <p>If you have any issues with this add-in, contact <a href="mailto://shubhhack@microsoft.com?subject=App Command Test
+            Add-in&body=Tell me what issue(s) you are facing. Repro steps
+            are always appreciated.">shubhhack</a>.
+    </div>
+    <script>
+            function myFunction() {
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://hooks.zapier.com/hooks/catch/XXX/", true);
             xhr.onreadystatechange = function() {
@@ -46,9 +86,7 @@
                     console.log(xhr.responseText);
                 }
             }
-        }
-
-        xhr.send('loginId=4&password=4');
+            xhr.send('loginId=4&password=4');
         }
 
         (function(i, s, o, g, r, a, m) {
@@ -74,7 +112,11 @@
                     console.log("Not Failed");
                 }
             });
-        }
+     }
+    </script>
+</body>
+
+</html>
     </script>
 </body>
 
