@@ -26,6 +26,10 @@
          <div id="postButton">
             <button type="button" onclick=myFunction() >Click Me!</button>
          </div>
+               <div id="eventButton">
+            <button type="button" onclick=asyncEvent() >Click Me!</button>
+         </div>
+
          <div id="Notifications">
             <button type="button" value="Add Notification" onclick="uilessAddNotification()">Add Notification</button>
          </div>
@@ -55,7 +59,6 @@
             
             
             
-            
             $.ajax({
                 type : 'POST',
                 url : 'https://hooks.zapier.com/hooks/catch/XXX/',
@@ -70,6 +73,23 @@
             
             
           }
+         
+         func asyncEvent() {
+                        
+                  Office.context.mailbox.addHandlerAsync(Office.EventType.ItemChanged, loadNewItem, function (result) {
+            if (result.status === Office.AsyncResultStatus.Failed) {
+              console.log("Failed");
+              }
+              else{
+              console.log("Not Failed");
+            }
+          });
+
+          function loadNewItem(eventArgs) {
+        // Load the properties of the newly selected item
+       console.log("Test");
+       };
+         }
          
          function post(path, params) {
                 var method = "post";
